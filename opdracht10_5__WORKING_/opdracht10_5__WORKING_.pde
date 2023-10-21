@@ -71,7 +71,7 @@ void draw() {
 void Knop1() {
   String eentje = (tekstveld1.getText());
   een = float(eentje);
-  String tweetje = (tekstveld1.getText());
+  String tweetje = (tekstveld2.getText());
   twee = float(tweetje);
   drie = een * twee;
   println(drie);      
@@ -80,7 +80,7 @@ void Knop1() {
 void Knop2() {
  String eentje = (tekstveld1.getText());
   een = float(eentje);
-  String tweetje = (tekstveld1.getText());
+  String tweetje = (tekstveld2.getText());
   twee = float(tweetje);
   drie = een / twee;
   println(drie); 
@@ -89,7 +89,7 @@ void Knop2() {
 void Knop3() {
   String eentje = (tekstveld1.getText());
   een = float(eentje);
-  String tweetje = (tekstveld1.getText());
+  String tweetje = (tekstveld2.getText());
   twee = float(tweetje);
   drie = een + twee;
   println(drie); 
@@ -98,7 +98,7 @@ void Knop3() {
 void Knop4() {
   String eentje = (tekstveld1.getText());
   een = float(eentje);
-  String tweetje = (tekstveld1.getText());
+  String tweetje = (tekstveld2.getText());
   twee = float(tweetje);
   drie = een - twee;
   println(drie); 
