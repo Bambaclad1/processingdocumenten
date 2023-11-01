@@ -9,7 +9,7 @@ int[] prevsnakeXY;
 int[] fruitXY;
 int score = 1;
 int speed = 10;
-int snakeLength = 5;
+int snakeLength = 1;
 boolean foodSpawned = false;
 boolean gotFruit = false;
 String direction = "Up";
@@ -123,16 +123,18 @@ void consoleLog() {
 
 
 void spawnFood() {
-  if (!foodSpawned && !gameover) {
-    fill(#FF5858);
-    rect(fruitXY[0], fruitXY[1], 10, 10);
-  }
+
 
   if (gotFruit) {
     fruitXY[0] = int(random(10, 29)) * 10;
     fruitXY[1] = int(random(10, 29)) * 10;
     snakeLength = snakeLength + 1;
     gotFruit = false;
+  }
+  
+    if (!foodSpawned && !gameover) {
+    fill(#FF5858);
+    rect(fruitXY[0], fruitXY[1], 10, 10);
   }
 }
 
@@ -157,7 +159,7 @@ void snakeGrow() { // dit stukje was lastig dus voormezelf comment ik wat ik ged
   }
 
   // de vorige positie opslaan en updaten
-  for (int i = 1; i < snakeLength; i++) {
+  for (int i = 1; i < snakeLength - 1; i++) {
     int tempX = snakeBody[i][0]; // slaat tempX in de array op
     int tempY = snakeBody[i][1]; // zelfde boven maar met Y
     if (snakeXY[0] == snakeBody[i][0] && snakeXY[1] == snakeBody[i][1]) {
@@ -168,5 +170,6 @@ void snakeGrow() { // dit stukje was lastig dus voormezelf comment ik wat ik ged
 
     prevX = tempX;
     prevY = tempY;
+    int 
   }
 }
